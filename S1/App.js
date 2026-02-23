@@ -6,13 +6,13 @@
 // console.log(a + b);
 
 // console.log("Sum of 10 and 30 is  :" + a + c);
-// //Returns a string 
+// //Returns a string
 
 // console.log("Sum of 10 and 30 is  :" + (a + c));
 // // Returns a Number/integer
 
 // console.log("Sum of 10 and 30 is  :" + a);
-// //Returns a string 
+// //Returns a string
 
 // console.log(a + c + "is sum of 10 and 20 ");
 // // Returns a Number/integer
@@ -20,7 +20,7 @@
 
 // //---------------------------------------------
 
-// //NOTE - when you do the operations given below, the string is converted into the integer by js engine and the process is called as :"type coercion" 
+// //NOTE - when you do the operations given below, the string is converted into the integer by js engine and the process is called as :"type coercion"
 // console.log('1' - 1);
 // console.log(typeof ('1' - 1));
 // console.log(1 - '1');
@@ -94,13 +94,75 @@
 
 //----------------------------------------------------------------
 
-//NOTE - '/' always returns a Quotient
-//NOTE - '%' alway returns a remainder
+// //NOTE - '/' always returns a Quotient
+// //NOTE - '%' alway returns a remainder
 
 
-let a4 = 5;
-let b4 = 2;
+// let a4 = 5;
+// let b4 = 2;
 
-console.log(a4 / b4); // 2.5
-console.log(a4 % b4); // 1
+// console.log(a4 / b4); // 2.5
+// console.log(a4 % b4); // 1
+
+
+// //-----------------------------------------------------------
+
+// // 1.
+// let i = 11;
+// i = i++ + ++i;
+
+// console.log(i);
+
+
+// // 2.
+// let a = 11, b = 22;
+// let c = a + b + a++ + b++ + ++a + ++b;
+// console.log('a', a);
+// console.log('b', b);
+// console.log('c', c);
+
+
+// // 3.
+// let d = true; //1
+// d++;
+// console.log(d);
+
+
+// // 4.
+// //Error - Invalid left-hand side expression in postfix operation
+// let e = 10++;
+// console.log(e);
+
+
+// //5
+// console.log(Math.round(20.5)); // Returns 21
+// console.log(Math.round(20.2));// Returns 20
+
+// console.log(Math.ceil(10.2)); // Returns 11
+// console.log(Math.ceil(10.9)); // Returns 11
+// console.log(Math.floor(10.9)); // Returns 10
+
+// console.log(Math.trunc(19.99));// Returns 19
+
+// console.log(Math.pow(2, 3)); // Returns 8
+// console.log(Math.sqrt(69)); // Returns 8.306623862918075
+
+
+// // Returns a random number between 0 and 1
+// let randomNum = Math.random();
+
+// // fixes the number to 2 decimal places
+// console.log(randomNum.toFixed(2));
+
+
+// //sqrt of s * (s-a) * (s-b) * (s-c)
+// let a = 5;
+// let b = 4;
+// let c = 3;
+
+// let s = (a + b + c) / 2;
+// console.log(s);
+
+
+// console.log(Math.sqrt(s * (s - a) * (s - b) * (s - c)));
 
