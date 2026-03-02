@@ -41,18 +41,60 @@ const prompt = promptSync();
 //------------------------------------------------
 //------------------------------------------------
 
-//Sum of all elements
-let arr = [10, 20, 30, 40, 50, 60];
-let sum = 0;
+// //Sum of all elements
+// let arr = [10, 20, 30, 40, 50, 60];
+// let sum = 0;
 
-for (let i = 0; i < arr.length; i++) {
-  sum += arr[i];
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// };
+
+
+// console.log(arr);
+// console.log('Sum of array given above is :');
+// console.log('sum =', sum);
+
+
+
+
+
+
+//------------------------------------------------
+//------------------------------------------------
+
+//Find the max number
+// let arr = [10, 20, 300, 40, 50, 60];
+// let max = arr[0];
+
+// for (let i = 1; i < arr.length; i++) {
+//   max = (max > arr[i]) ? max : arr[i];
+// };
+
+// console.log(max);
+
+
+//------------------------------------------------
+//------------------------------------------------
+
+//Find the 2 max number
+let arr = [1000, 20, 300, 40, 50, 60];
+
+//to find the max from specified ayyar indx
+let max = Math.max(arr[0], arr[1]);
+
+//to find the min from specified ayyar indx
+let secondMax = Math.min(arr[0], arr[1]);
+
+
+for (let i = 2; i < arr.length; i++) {
+  if (arr[i] > max) {
+    secondMax = max;
+    max = arr[i];
+  } else if (arr[i] > secondMax) {
+    secondMax = arr[i];
+  }
 };
 
-
-console.log(arr);
-console.log('Sum of array given above is :');
-console.log('sum =', sum);
-
+console.log(max, secondMax);
 
 
