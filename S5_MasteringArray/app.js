@@ -77,7 +77,7 @@ const prompt = promptSync();
 //------------------------------------------------
 
 //Find the 2 max number
-let arr = [1000, 20, 300, 40, 50, 60];
+let arr = [40, 40, 40, 50, 40, 40, 50];
 
 //to find the max from specified ayyar indx
 let max = Math.max(arr[0], arr[1]);
@@ -90,7 +90,7 @@ for (let i = 2; i < arr.length; i++) {
   if (arr[i] > max) {
     secondMax = max;
     max = arr[i];
-  } else if (arr[i] > secondMax) {
+  } else if (arr[i] > secondMax && arr[i] < max) {
     secondMax = arr[i];
   }
 };
