@@ -172,19 +172,14 @@ let j = 0;
 
 while (i < arr.length) {
   if (arr[i] < 0 || arr[i] == 1) {
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-    j++
+    if (arr[i] == 0) {
+      let temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+      j++
+    }
+    i++
   }
-  i++
 }
 
-
 console.log(arr);
-
-
-
-
-
-
