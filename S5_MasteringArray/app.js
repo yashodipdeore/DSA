@@ -41,7 +41,7 @@ const prompt = promptSync();
 //------------------------------------------------
 //------------------------------------------------
 
-// //Sum of all elements
+//SECTION -  Sum of all elements
 // let arr = [10, 20, 30, 40, 50, 60];
 // let sum = 0;
 
@@ -62,7 +62,7 @@ const prompt = promptSync();
 //------------------------------------------------
 //------------------------------------------------
 
-//Find the max number
+//SECTION -  Find the max number
 // let arr = [10, 20, 300, 40, 50, 60];
 // let max = arr[0];
 
@@ -76,25 +76,47 @@ const prompt = promptSync();
 //------------------------------------------------
 //------------------------------------------------
 
-//Find the 2 max number
-let arr = [40, 40, 40, 50, 40, 40, 50];
+//SECTION - Find the 2 max number
+// let arr = [40, 40, 40, 50, 40, 40, 50];
 
-//to find the max from specified ayyar indx
-let max = Math.max(arr[0], arr[1]);
+// //to find the max from specified ayyar indx
+// let max = Math.max(arr[0], arr[1]);
 
-//to find the min from specified ayyar indx
-let secondMax = Math.min(arr[0], arr[1]);
+// //to find the min from specified ayyar indx
+// let secondMax = Math.min(arr[0], arr[1]);
 
 
-for (let i = 2; i < arr.length; i++) {
-  if (arr[i] > max) {
-    secondMax = max;
-    max = arr[i];
-  } else if (arr[i] > secondMax && arr[i] < max) {
-    secondMax = arr[i];
-  }
+// for (let i = 2; i < arr.length; i++) {
+//   if (arr[i] > max) {
+//     secondMax = max;
+//     max = arr[i];
+//   } else if (arr[i] > secondMax && arr[i] < max) {
+//     secondMax = arr[i];
+//   }
+// };
+
+// console.log(max, secondMax);
+
+
+
+//------------------------------------------------
+//------------------------------------------------
+
+//SECTION - Reverse array with extra space
+let arr = [10, 20, 30, 40, 50];
+let temp = new Array(arr.length);
+
+let j = 0;
+for (let i = arr.length - 1; i >= 0; i--) {
+  temp[j] = arr[i];
+  j++;
 };
 
-console.log(max, secondMax);
+console.log(arr);
+console.log(temp);
+
+
+
+
 
 
