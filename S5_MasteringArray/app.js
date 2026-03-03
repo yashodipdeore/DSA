@@ -120,20 +120,70 @@ const prompt = promptSync();
 //------------------------------------------------
 
 //SECTION - Reverse array without extra space
-let arr = [10, 20, 30, 40, 50];
+// let arr = [10, 20, 30, 40, 50];
+
+// let i = 0;
+// let j = arr.length - 1;
+
+// while (i != j) {
+//   let temp = arr[i];
+//   arr[i] = arr[j];
+//   arr[j] = temp;
+//   i++;
+//   j--;
+// }
+
+// console.log(arr);
+
+
+
+//------------------------------------------------
+//------------------------------------------------
+
+//SECTION - Prefixing all the zero's/0 and post Pixing One's/1
+// let arr = [1, 1, 0, 1, 0, 1, 1, 0, 0];
+
+// let i = 0;
+// let j = 0;
+
+// while (i < arr.length) {
+//   if (arr[i] == 0) {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     j++
+//   }
+//   i++
+// }
+
+
+// console.log(arr);
+
+
+
+
+//------------------------------------------------
+//------------------------------------------------
+
+let arr = [-1, -1, 0, 1, 0, -1, 1, 0, 0];
 
 let i = 0;
-let j = arr.length - 1;
+let j = 0;
 
-while (i != j) {
-  let temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
-  i++;
-  j--;
+while (i < arr.length) {
+  if (arr[i] < 0 || arr[i] == 1) {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    j++
+  }
+  i++
 }
 
+
 console.log(arr);
+
+
 
 
 
