@@ -76,28 +76,28 @@
 
 
 
-//SECTION - 5. Right rotation by k element Best Way
-let arr = [1, 2, 3, 4, 5];
-let temp = Array(arr.length);
+//SECTION - 6. Most efficient algorithm
+// let arr = [1, 2, 3, 4, 5];
+// let k = 2;
 
-let n = 1;
-let k = n % arr.length;
-console.log(k);
+// //Function calls for right rotation
+// reverse(0, arr.length - 1);
+// reverse(k, arr.length - 1);
+// reverse(0, k - 1);
 
+// //function calls for left rotation
+// reverse(0, k - 1);
+// reverse(k, arr.length - 1);
+// reverse(0, arr.length - 1);
 
-for (let i = 0; i < arr.length; i++) {
-  temp[i] = arr[(i + k) % arr.length];
-}
+// function reverse(i, j) {
+//   while (i < j) {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     i++;
+//     j--;
+//   };
+// };
 
-console.log("Original Array : ", arr);
-console.log("New Array : ", temp);
-
-
-
-
-
-
-
-
-
-
+// console.log(arr);
