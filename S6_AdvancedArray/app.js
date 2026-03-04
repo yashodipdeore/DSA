@@ -42,19 +42,61 @@
 
 
 //SECTION - 4. left and right rotation by k element
+// let arr = [1, 2, 3, 4, 5];
+// let n = 1;
+// let k = n % arr.length;
+
+// for (let i = 0; i < k; i++) {
+//   let firstEl = arr[0];
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+//   arr[arr.length - 1] = firstEl;
+// };
+
+// console.log(arr);
+
+
+
+//SECTION - 5. left rotation by k element Best Way but with extra space
+// let arr = [1, 2, 3, 4, 5];
+// let temp = Array(arr.length);
+
+// let n = 1;
+// let k = n % arr.length;
+// console.log(k);
+
+
+// for (let i = 0; i < arr.length; i++) {
+//   temp[i] = arr[(i + k) % arr.length];
+// }
+
+// console.log("Original Array : ", arr);
+// console.log("New Array : ", temp);
+
+
+
+//SECTION - 5. Right rotation by k element Best Way
 let arr = [1, 2, 3, 4, 5];
-let n = 5;
+let temp = Array(arr.length);
+
+let n = 1;
 let k = n % arr.length;
+console.log(k);
 
-for (let i = 0; i < k; i++) {
-  let firstEl = arr[0];
-  for (let i = 0; i < arr.length - 1; i++) {
-    arr[i] = arr[i + 1];
-  }
-  arr[arr.length - 1] = firstEl;
-};
 
-console.log(arr);
+for (let i = 0; i < arr.length; i++) {
+  temp[i] = arr[(i + k) % arr.length];
+}
+
+console.log("Original Array : ", arr);
+console.log("New Array : ", temp);
+
+
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
-import promptSync from "prompt-sync";
-const prompt = promptSync();
-//NOTE - Array is a lenear data structure
-//SECTION - Array Implimentation
+// import promptSync from "prompt-sync";
+// const prompt = promptSync();
+//NOTE - Array is a lennar data structure
+//SECTION - Array implementation
 //let arr = [];
 
 // arr.push(10);
@@ -79,10 +79,10 @@ const prompt = promptSync();
 //SECTION - Find the 2 max number
 // let arr = [40, 40, 40, 50, 40, 40, 50];
 
-// //to find the max from specified ayyar indx
+// //to find the max from specified array indx
 // let max = Math.max(arr[0], arr[1]);
 
-// //to find the min from specified ayyar indx
+// //to find the min from specified array indx
 // let secondMax = Math.min(arr[0], arr[1]);
 
 
@@ -140,7 +140,7 @@ const prompt = promptSync();
 //------------------------------------------------
 //------------------------------------------------
 
-//SECTION - Prefixing all the zero's/0 and post Pixing One's/1
+//SECTION - Prefixing all the zero's/0 and post piing One's/1
 // let arr = [1, 1, 0, 1, 0, 1, 1, 0, 0];
 
 // let i = 0;
@@ -179,7 +179,7 @@ while (i < arr.length) {
       j++
     }
     i++
-  }
-}
+  };
+};
 
 console.log(arr);
