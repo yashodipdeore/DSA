@@ -104,17 +104,44 @@
 
 
 
-//SECTION - remove duplicates from sorted array
+//SECTION - 7. remove duplicates from sorted array
 
-let arr = [1, 1, 2, 3, 4, 4, 5, 5, 6];
+// let arr = [1, 1, 2, 3, 4, 4, 5, 5, 6];
 
-let j = 1;
-for (let i = 0; i < arr.length - 1; i++) {
-  if (arr[i] != arr[i + 1]) {
-    arr[j] = arr[i + 1];
+// let j = 1;
+// for (let i = 0; i < arr.length - 1; i++) {
+//   if (arr[i] != arr[i + 1]) {
+//     arr[j] = arr[i + 1];
+//     j++;
+//   };
+// };
+
+// console.log(arr);
+
+
+
+//SECTION - Merge sort array
+
+let arr1 = [2, 5, 6];
+let arr2 = [1, 3, 4, 8];
+
+
+let temp = new Array(arr1.length + arr2.length);
+let i = 0;
+let j = 0;
+for (let k = 0; k < temp.length; k++) {
+  if (arr1[i] < arr2[j]) {
+    temp[k] = arr1[i];
+    i++;
+  } else {
+    temp[k] = arr2[j];
     j++;
-  };
+  }
 };
 
-console.log(arr);
+console.log(temp);
+
+
+
+
 
