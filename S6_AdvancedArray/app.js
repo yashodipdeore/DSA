@@ -123,23 +123,32 @@
 //SECTION - Merge sort array
 
 let arr1 = [2, 5, 6];
-let arr2 = [1, 3, 4, 8];
-
+let arr2 = [1, 3, 4, 8, 10, 11];
 
 let temp = new Array(arr1.length + arr2.length);
 let i = 0;
 let j = 0;
+
 for (let k = 0; k < temp.length; k++) {
-  if (arr1[i] < arr2[j]) {
-    temp[k] = arr1[i];
-    i++;
-  } else {
-    temp[k] = arr2[j];
-    j++;
+
+  if (i >= arr1.length) {
+    temp[k] = arr2[j++];
   }
-};
+  else if (j >= arr2.length) {
+    temp[k] = arr1[i++];
+  }
+  else if (arr1[i] <= arr2[j]) {
+    temp[k] = arr1[i++];
+  }
+  else {
+    temp[k] = arr2[j++];
+  }
+
+}
 
 console.log(temp);
+console.log(temp.length);
+
 
 
 
