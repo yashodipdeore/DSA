@@ -219,19 +219,52 @@
 // console.log(arr);
 
 
-//SECTION -  max sub Array algorithm  
+//SECTION -  max sub Array algorithm
 
-function maxSubArray(nums) {
-  let max = -Infinity;
-  let sum = 0;
+// function maxSubArray(nums) {
+//   let max = -Infinity;
+//   let sum = 0;
 
-  for (leti = 0; i < nums.length; i++) {
-    sum += sum[i];
-    max = Math.max(max, sum);
-    if (sum < 0) sum = 0;
-  }
+//   for (leti = 0; i < nums.length; i++) {
+//     sum += sum[i];
+//     max = Math.max(max, sum);
+//     if (sum < 0) sum = 0;
+//   }
 
-  return max;
-}
+//   return max;
+// }
 
-console.log(maxSubArray);
+// console.log(maxSubArray);
+
+
+//SECTION - Most occured elemnts in the array
+
+function majorityElement(arr) {
+  let ans = arr[0];
+  let count = 1;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (count == 0) {
+      ans = arr[i];
+      count = 1;
+    } else if (arr[i] == ans) {
+      count++;
+    } else {
+      count--;
+    }
+  };
+
+  return ans;
+};
+
+console.log(majorityElement([3, 1, 4, 5, 1, 6, 7, 5, 6, 3, 2, 8, 9, 4, 9, 1, 1]));
+
+
+
+
+
+
+
+
+
+
