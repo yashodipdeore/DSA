@@ -1,122 +1,121 @@
 //SECTION - 1. left rotation by 1 element
 
-// let prices = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-// let firstEl = prices[0];
-// for (let i = 0; i < prices.length - 1; i++) {
-//   prices[i] = prices[i + 1];
+// let firstEl = arr[0];
+// for (let i = 0; i < arr.length - 1; i++) {
+//   arr[i] = arr[i + 1];
 // }
-// prices[(prices.length - 1)] = firstEl;
-// console.log(prices);
-
+// arr[(arr.length - 1)] = firstEl;
+// console.log(arr);
 
 
 //SECTION - 2. Right rotation by 1 element
 
-// let prices = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-// let lastEl = prices[prices.length - 1];
-// for (let i = prices.length - 1; i > 0; i--) {
-//   prices[i] = prices[i - 1];
+// let lastEl = arr[arr.length - 1];
+// for (let i = arr.length - 1; i > 0; i--) {
+//   arr[i] = arr[i - 1];
 // }
 
-// prices[0] = lastEl;
-// console.log(prices);
+// arr[0] = lastEl;
+// console.log(arr);
 
 
 
 //SECTION - 3. left and right rotation by k element
 
-// let prices = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
 // let n = 3;
 // for (let i = 0; i < n; i++) {
-//   let lastEl = prices[prices.length - 1];
-//   for (let i = prices.length - 1; i > 0; i--) {
-//     prices[i] = prices[i - 1];
+//   let lastEl = arr[arr.length - 1];
+//   for (let i = arr.length - 1; i > 0; i--) {
+//     arr[i] = arr[i - 1];
 //   }
-//   prices[0] = lastEl;
+//   arr[0] = lastEl;
 // };
 
-// console.log(prices);
+// console.log(arr);
 
 
 //SECTION - 4. left and right rotation by k element
-// let prices = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 // let n = 1;
-// let k = n % prices.length;
+// let k = n % arr.length;
 
 // for (let i = 0; i < k; i++) {
-//   let firstEl = prices[0];
-//   for (let i = 0; i < prices.length - 1; i++) {
-//     prices[i] = prices[i + 1];
+//   let firstEl = arr[0];
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
 //   }
-//   prices[prices.length - 1] = firstEl;
+//   arr[arr.length - 1] = firstEl;
 // };
 
-// console.log(prices);
+// console.log(arr);
 
 
 
 //SECTION - 5. left rotation by k element Best Way but with extra space
-// let prices = [1, 2, 3, 4, 5];
-// let temp = Array(prices.length);
+// let arr = [1, 2, 3, 4, 5];
+// let temp = Array(arr.length);
 
 // let n = 1;
-// let k = n % prices.length;
+// let k = n % arr.length;
 // console.log(k);
 
 
-// for (let i = 0; i < prices.length; i++) {
-//   temp[i] = prices[(i + k) % prices.length];
+// for (let i = 0; i < arr.length; i++) {
+//   temp[i] = arr[(i + k) % arr.length];
 // }
 
-// console.log("Original Array : ", prices);
+// console.log("Original Array : ", arr);
 // console.log("New Array : ", temp);
 
 
 
 //SECTION - 6. Most efficient algorithm
-// let prices = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 // let k = 2;
 
 // //Function calls for right rotation
-// reverse(0, prices.length - 1);
-// reverse(k, prices.length - 1);
+// reverse(0, arr.length - 1);
+// reverse(k, arr.length - 1);
 // reverse(0, k - 1);
 
 // //function calls for left rotation
 // reverse(0, k - 1);
-// reverse(k, prices.length - 1);
-// reverse(0, prices.length - 1);
+// reverse(k, arr.length - 1);
+// reverse(0, arr.length - 1);
 
 // function reverse(i, j) {
 //   while (i < j) {
-//     let temp = prices[i];
-//     prices[i] = prices[j];
-//     prices[j] = temp;
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
 //     i++;
 //     j--;
 //   };
 // };
 
-// console.log(prices);
+// console.log(arr);
 
 
 
 //SECTION - 7. remove duplicates from sorted array
 
-// let prices = [1, 1, 2, 3, 4, 4, 5, 5, 6];
+// let arr = [1, 1, 2, 3, 4, 4, 5, 5, 6];
 
 // let j = 1;
-// for (let i = 0; i < prices.length - 1; i++) {
-//   if (prices[i] != prices[i + 1]) {
-//     prices[j] = prices[i + 1];
+// for (let i = 0; i < arr.length - 1; i++) {
+//   if (arr[i] != arr[i + 1]) {
+//     arr[j] = arr[i + 1];
 //     j++;
 //   };
 // };
 
-// console.log(prices);
+// console.log(arr);
 
 
 
@@ -153,21 +152,47 @@
 
 //SECTION - Best time to buy and sell the stock
 
-var maxProfit = function (prices) {
-  let maxProfit = 0;
-  let min = prices[0];
-  for (let i = 0; i < prices.length; i++) {
-    if (prices[i] < min) {
-      min = prices[i];
+// var maxProfit = function (arr) {
+//   let maxProfit = 0;
+//   let min = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//       min = arr[i];
+//     }
+//     let profit = arr[i] - min;
+//     maxProfit = Math.max(maxProfit, profit);
+//   };
+//   return maxProfit;
+// }
+
+// let arr = [1, 2, 4, 1, 7, 8, 3, 9, 10];
+// console.log(maxProfit(arr));
+
+
+
+//SECTION - Best Time to Buy and Sell Stock II
+
+function maxProfit(prices) {
+  let profit = 0;
+
+  for (let i = 1; i < prices.length; i++) {
+
+    if (prices[i] > prices[i - 1]) {
+      profit += prices[i] - prices[i - 1];
     }
-    let profit = prices[i] - min;
-    maxProfit = Math.max(maxProfit, profit);
-  };
-  return maxProfit;
+
+  }
+
+  return profit;
 }
 
-let prices = [1, 2, 4, 1, 7, 8, 3, 9, 10];
+let prices = [7, 1, 5, 3, 6, 4];
 console.log(maxProfit(prices));
+
+
+
+
+
 
 
 
