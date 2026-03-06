@@ -191,30 +191,47 @@
 
 
 
-//SECTION -  given an array of colors 
+//SECTION -  given an array of colors
 
 //replace the nums with colours
-let arr = [0, 1, 2, 0, 0, 1, 1, 0, 0, 2, 1, 2];
-let j = 0;//0
-let k = arr.length - 1;//2
-let i = 0; //curr indx
+// let arr = [0, 1, 2, 0, 0, 1, 1, 0, 0, 2, 1, 2];
+// let j = 0;//0
+// let k = arr.length - 1;//2
+// let i = 0; //curr indx
 
-while (i < k) {
-  if (arr[i] == 0) {
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-    j++;
-    i++;
-  } else if (arr[i] == 2) {
-    let temp = arr[i];
-    arr[i] = arr[k];
-    arr[k] = temp;
-    k--;
-  } else {
-    i++;
+// while (i < k) {
+//   if (arr[i] == 0) {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     j++;
+//     i++;
+//   } else if (arr[i] == 2) {
+//     let temp = arr[i];
+//     arr[i] = arr[k];
+//     arr[k] = temp;
+//     k--;
+//   } else {
+//     i++;
+//   }
+// };
+
+// console.log(arr);
+
+
+//SECTION -  max sub Array algorithm  
+
+function maxSubArray(nums) {
+  let max = -Infinity;
+  let sum = 0;
+
+  for (leti = 0; i < nums.length; i++) {
+    sum += sum[i];
+    max = Math.max(max, sum);
+    if (sum < 0) sum = 0;
   }
-};
 
-console.log(arr);
+  return max;
+}
 
+console.log(maxSubArray);
