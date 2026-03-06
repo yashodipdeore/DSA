@@ -172,27 +172,49 @@
 
 //SECTION - Best Time to Buy and Sell Stock II
 
-function maxProfit(prices) {
-  let profit = 0;
+// function maxProfit(prices) {
+//   let profit = 0;
 
-  for (let i = 1; i < prices.length; i++) {
+//   for (let i = 1; i < prices.length; i++) {
+//     if (prices[i] > prices[i - 1]) {
+//       profit += prices[i] - prices[i - 1];
+//     };
+//   };
 
-    if (prices[i] > prices[i - 1]) {
-      profit += prices[i] - prices[i - 1];
-    }
+//   return profit;
+// };
 
+// let prices = [7, 1, 5, 3, 6, 4];
+// console.log(maxProfit(prices));
+
+
+
+
+
+//SECTION -  given an array of colors 
+
+//replace the nums with colours
+let arr = [0, 1, 2, 0, 0, 1, 1, 0, 0, 2, 1, 2];
+let j = 0;//0
+let k = arr.length - 1;//2
+let i = 0; //curr indx
+
+while (i < k) {
+  if (arr[i] == 0) {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    j++;
+    i++;
+  } else if (arr[i] == 2) {
+    let temp = arr[i];
+    arr[i] = arr[k];
+    arr[k] = temp;
+    k--;
+  } else {
+    i++;
   }
+};
 
-  return profit;
-}
-
-let prices = [7, 1, 5, 3, 6, 4];
-console.log(maxProfit(prices));
-
-
-
-
-
-
-
+console.log(arr);
 
