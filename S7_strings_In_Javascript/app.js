@@ -18,22 +18,39 @@
 
 
 
-//SECTION -   Toggle the charecters;
-let str1 = "YASHodip";
-let toggle = '';
+//SECTION -   Toggle the characters;
+// let str1 = "YASHodip";
+// let toggle = '';
+
+// for (let i = 0; i < str1.length; i++) {
+//   let ch = str1.charCodeAt(i);
+
+//   if (ch >= 65 && ch <= 90) {
+//     toggle += String.fromCharCode(ch + 32);
+//   } else {
+//     toggle += String.fromCharCode(ch - 32);
+//   }
+// };
+
+// console.log(str1);
+// console.log(toggle);
+
+
+
+//SECTION - Character frequency count using array hashing
+
+let str1 = 'hello';
+let arr = new Array(128).fill(0);
 
 for (let i = 0; i < str1.length; i++) {
   let ch = str1.charCodeAt(i);
-
-  if (ch >= 65 && ch <= 90) {
-    toggle += String.fromCharCode(ch + 32);
-  } else {
-    toggle += String.fromCharCode(ch - 32);
-  }
+  arr[ch] += 1;
 };
 
-console.log(str1);
-console.log(toggle);
 
+console.log(arr);
 
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
 
