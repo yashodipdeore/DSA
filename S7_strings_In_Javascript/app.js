@@ -1,19 +1,39 @@
 
 //SECTION - Checking if a given string is Palindrome or not
-let name = "YaY";
+// let str1 = "YaY";
 
-let i = 0;
-let j = name.length - 1;
+// let i = 0;
+// let j = str1.length - 1;
 
-while (i != j) {
-  if (name.charAt(i) == name.charAt(j)) {
-    i++;
-    j--;
-    console.log('palindrome');
+// while (i != j) {
+//   if (str1.charAt(i) == str1.charAt(j)) {
+//     i++;
+//     j--;
+//     console.log('palindrome');
+//   } else {
+//     console.log('not palindrome');
+//     break;
+//   }
+//}
+
+
+
+//SECTION -   Toggle the charecters;
+let str1 = "YASHodip";
+let toggle = '';
+
+for (let i = 0; i < str1.length; i++) {
+  let ch = str1.charCodeAt(i);
+
+  if (ch >= 65 && ch <= 90) {
+    toggle += String.fromCharCode(ch + 32);
   } else {
-    console.log('not palindrome');
-    break;
+    toggle += String.fromCharCode(ch - 32);
   }
-}
+};
+
+console.log(str1);
+console.log(toggle);
+
 
 
