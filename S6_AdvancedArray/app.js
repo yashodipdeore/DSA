@@ -239,27 +239,65 @@
 
 //SECTION - Most occured elemnts in the array
 
-function majorityElement(arr) {
-  let ans = arr[0];
-  let count = 1;
+// function majorityElement(arr) {
+//   let ans = arr[0];
+//   let count = 1;
 
-  for (let i = 1; i < arr.length; i++) {
-    if (count == 0) {
-      ans = arr[i];
-      count = 1;
-    } else if (arr[i] == ans) {
-      count++;
-    } else {
-      count--;
-    }
+//   for (let i = 1; i < arr.length; i++) {
+//     if (count == 0) {
+//       ans = arr[i];
+//       count = 1;
+//     } else if (arr[i] == ans) {
+//       count++;
+//     } else {
+//       count--;
+//     }
+//   };
+
+//   return ans;
+// };
+
+// console.log(majorityElement([3, 1, 4, 5, 1, 6, 7, 5, 6, 3, , 1, 1]));
+
+
+
+
+//SECTION - Trap rain water
+
+function Trap(height) {
+  //creating Array
+  let left = new Array(height.length);
+  let right = new Array(height.length);
+
+  //Getting Max values of left and right
+  let maxLeft = height[0];
+  let maxRight = height[height.length - 1];
+
+  //Assigning the values to left and right array
+  left[0] = maxLeft;
+  right[right.length - 1] = maxRight;
+
+  let ans = 0;
+
+  for (let i = 1; i < height.length; i++) {
+    maxLeft = Math.max(height[i], maxLeft);
+    left[i] = maxLeft;
   };
+
+  for (let i = height.length - 2; i >= 0; i--) {
+    maxRight = Math.max(height[i], maxRight);
+    right[i] = maxLeft;
+  };
+
+  for (let i = 0; i < height.length; i++) {
+    ans += (Math.min(left[i], right[i])) - height[i];
+  }
 
   return ans;
 };
 
-console.log(majorityElement([3, 1, 4, 5, 1, 6, 7, 5, 6, 3, 2, 8, 9, 4, 9, 1, 1]));
 
-
+console.log(Trap([2, 5, 2, 1, 0, 7]));
 
 
 
