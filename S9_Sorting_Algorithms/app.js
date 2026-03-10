@@ -1,4 +1,4 @@
-//Bubble Sort
+//Bubble Sort :-
 
 let arr = [10, 5, 1, 12, 3];
 
@@ -18,3 +18,5 @@ for (let i = 0; i < n - 1; i++) {
 
 console.log(arr);
 
+
+//SECTION -  Selection Sort :-
