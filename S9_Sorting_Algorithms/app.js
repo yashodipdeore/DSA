@@ -60,6 +60,39 @@
 // console.log(arr);
 
 
+//----------Selection sort my version-----------------
+
+let arr = [10, 5, 1, 12, 3];
+let n = arr.length;
+console.log(arr);
+
+for (let i = 0; i < n - 1; i++) {
+  let minIndex = i;
+  for (let j = i + 1; j < n; j++) {
+
+    //Ascending order
+    if (arr[minIndex] < arr[j]) {
+      minIndex = j;
+    };
+
+    //Descending order
+    // if (arr[minIndex] < arr[j]) {
+    //   minIndex = j;
+    // };
+  };
+
+  if (minIndex != i) {
+    temp = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temp;
+  };
+};
+
+console.log(arr);
+
+
+
+
 
 
 
