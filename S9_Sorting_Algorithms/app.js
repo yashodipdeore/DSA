@@ -17,7 +17,7 @@
 
 // console.log(arr);
 
-//-----------My version -------------
+//------------------ My version --------------------
 
 // let arr = [10, 5, 1, 12, 3];
 // let n = arr.length;
@@ -60,39 +60,35 @@
 // console.log(arr);
 
 
-//----------Selection sort my version-----------------
+//----------Selection sort my version------------
 
-let arr = [10, 5, 1, 12, 3];
-let n = arr.length;
-console.log(arr);
+// let arr = [10, 5, 1, 12, 3];
+// let n = arr.length;
+// console.log(arr);
 
-for (let i = 0; i < n - 1; i++) {
-  let minIndex = i;
-  for (let j = i + 1; j < n; j++) {
+// for (let i = 0; i < n - 1; i++) {
+//   let minIndex = i;
+//   for (let j = i + 1; j < n; j++) {
 
-    //Ascending order
-    if (arr[minIndex] < arr[j]) {
-      minIndex = j;
-    };
+//     //Ascending order
+//     if (arr[minIndex] < arr[j]) {
+//       minIndex = j;
+//     };
 
-    //Descending order
-    // if (arr[minIndex] < arr[j]) {
-    //   minIndex = j;
-    // };
-  };
+//     //Descending order
+//     // if (arr[minIndex] < arr[j]) {
+//     //   minIndex = j;
+//     // };
+//   };
 
-  if (minIndex != i) {
-    temp = arr[i];
-    arr[i] = arr[minIndex];
-    arr[minIndex] = temp;
-  };
-};
+//   if (minIndex != i) {
+//     temp = arr[i];
+//     arr[i] = arr[minIndex];
+//     arr[minIndex] = temp;
+//   };
+// };
 
-console.log(arr);
-
-
-
-
+// console.log(arr);
 
 
 
@@ -110,8 +106,26 @@ console.log(arr);
 //     j--;
 //   }
 //   arr[j + 1] = key;
-
-
 // }
 
 // console.log(arr);
+
+//---------------------- Insertion Sort ------------------
+
+let arr = [10, 5, 1, 12, 3];
+let n = arr.length;
+
+for (let i = 0; i < n; i++) {
+  let key = arr[i];
+  let j = i - 1;
+
+  while (j >= 0 && arr[j] > key) {
+    arr[j + 1] = arr[j];
+    j--;
+  }
+  arr[j + 1] = key;
+}
+
+console.log(arr);
+
+
