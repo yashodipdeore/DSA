@@ -28,24 +28,39 @@
 
 //SECTION - 3. Factorial of a number using recursion
 
-function factorial(num) {
-  if (num === 0) return 1;
-  return num * factorial(num - 1);
-}
+// function factorial(num) {
+//   if (num === 0) return 1;
+//   return num * factorial(num - 1);
+// }
 
-console.log(factorial(5)); // 120
+// console.log(factorial(5)); // 120
 
 
 //SECTION - 4. Fibonacci series using recursion
-
 //ANCHOR - Fibonacci Of "N" Terms :-
-function fiboNTerms(n, first, second) {
-  if (n == 0) return;
-  let third = first + second;
-  process.stdout.write(third + " ");
-  fiboNTerms(n - 1, second, third);
-}
+// function fiboNTerms(n, first, second) {
+//   if (n == 0) return;
+//   let third = first + second;
+//   process.stdout.write(third + " ");
+//   fiboNTerms(n - 1, second, third);
+// }
 
-let n = 10;
-process.stdout.write(0 + " " + 1 + " ");
-fiboNTerms(n - 2, 0, 1);
+// let n = 10;
+// process.stdout.write(0 + " " + 1 + " ");
+// fiboNTerms(n - 2, 0, 1);
+
+
+//ANCHOR - Fibbonacci of "N"th Term :-
+
+function fiboNthTerm(n) {
+  if (n == 0 || n == 1) return n;
+
+  return fiboNthTerm(n - 1) + fiboNthTerm(n - 2);
+};
+
+
+console.log(fiboNthTerm(7));
+
+
+
+
